@@ -17,8 +17,10 @@ yarn start
 Before you deploy, make sure you generated your bundle through `yarn run build`.
 
 
-Inspiration
+## Inspiration
 
 [Detailed explanation about the setup](http://ditrospecta.com/javascript/react/es6/webpack/heroku/2015/08/08/deploying-react-webpack-heroku.html).
 
-## webpack 2 is not compability with webpack 1
+
+## Issue 
+- webpack 2 is not compability with webpack 1
