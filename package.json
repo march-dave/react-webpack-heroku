@@ -1,10 +1,10 @@
 {
-    "name": "webpack-heroku-boilerplate",
+    "name": "react-webpack-heroku",
     "version": "1.0.0",
     "description": "Simplest Heroku starter kit for React apps.",
     "main": "./src/entry.js",
-    "homepage": "https://github.com/wallacyyy/webpack-heroku",
-    "author": "Leonardo Couto",
+    "homepage": "https://github.com/march-dave/react-webpack-heroku",
+    "author": "Dave Lee",
     "license": "MIT",
     "scripts": {
         "clean": "rm -rf build public/bundle.*",
@@ -12,8 +12,7 @@
         "start": "node app.js"
     },
     "repository": {
-        "type": "git",
-        "url": "git+https://github.com/wallacyyy/webpack-heroku.git"
+        "url": "https://github.com/march-dave/react-webpack-heroku.git"
     },
     "keywords": [
         "react",
@@ -23,9 +22,9 @@
         "javascript"
     ],
     "dependencies": {
-        "express": "^4.13.4",
-        "react": "^0.14.8",
-        "react-dom": "^0.14.8"
+        "express": "^4.15.0",
+        "react": "^15.4.2",
+        "react-dom": "^15.4.2"
     },
     "devDependencies": {
         "babel": "^6.5.2",
