@@ -60,4 +60,4 @@ Session.vim
 .netrwhist
 *~
 
-.lock
+*.lock
