@@ -27,4 +27,6 @@ Before you deploy, make sure you generated your bundle through `yarn run build`.
 
 
 ## Issue 
+- folder /server is not working with project at this time but created and sub files
+- Not working the babel package build script -- "build": "cross-env NODE_ENV=production babel server --out-dir public --presets=es2015 &&  webpack --config ./webpack.prod.config.js --progress --colors",
 - webpack 2 is not compability with webpack 1

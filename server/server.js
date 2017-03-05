@@ -1,5 +1,5 @@
-const path = require('path')
-const express = require('express')
+import path from 'path';
+import express from 'express';
 
 module.exports = {
     app: function() {
