@@ -9,9 +9,6 @@ import thunk from 'redux-thunk';
 
 import './styles/app.scss'
 
-
-
-
 const store = createStore(reducers, applyMiddleware(thunk));
 
 const rootElement = document.getElementById('main');
