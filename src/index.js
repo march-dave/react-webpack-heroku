@@ -4,14 +4,18 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import App from './components/app'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import reducers from 'reducers';
+// import reducers from 'reducers';
 import thunk from 'redux-thunk';
 
 import './styles/app.scss'
 
-const store = createStore(reducers, applyMiddleware(thunk));
+// const store = createStore(reducers, applyMiddleware(thunk));
 
-const rootElement = document.getElementById('main');
+ReactDOM.render(
+    <App />, document.getElementById('main')
+);
+
+/*const rootElement = document.getElementById('main');
 ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>
@@ -24,5 +28,4 @@ ReactDOM.render(
             </Route>
         </Router>
     </Provider>, rootElement
-);
-
+);*/
