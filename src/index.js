@@ -11,8 +11,8 @@ import './styles/app.scss'
 
 // const store = createStore(reducers, applyMiddleware(thunk));
 
-ReactDOM.render( <
-    App / > , document.getElementById('main')
+ReactDOM.render(
+    <App />, document.getElementById('main')
 );
 
 /*const rootElement = document.getElementById('main');
