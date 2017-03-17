@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 // import reducers from 'reducers';
 import thunk from 'redux-thunk';
 
-import './styles/app.scss'
+// import './styles/app.scss'
 
 // const store = createStore(reducers, applyMiddleware(thunk));
 
