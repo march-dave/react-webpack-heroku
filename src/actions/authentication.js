@@ -10,3 +10,5 @@ import {
     AUTH_GET_STATUS_FAILURE,
     AUTH_LOGOUT
 } from './ActionTypes';
+
+import axios from 'axios';
