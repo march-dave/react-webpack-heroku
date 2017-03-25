@@ -25,3 +25,16 @@ export function loginRequest(username, password) {
             });
     };
 }
+
+export function login() {
+    return {
+        type: AUTH_LOGIN
+    };
+}
+
+export function loginSuccess(username) {
+    return {
+        type: AUTH_LOGIN_SUCCESS,
+        username
+    }
+}
