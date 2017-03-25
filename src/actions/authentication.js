@@ -12,3 +12,16 @@ import {
 } from './ActionTypes';
 
 import axios from 'axios';
+
+export function loginRequest(username, password) {
+    return (dispatch) => {
+        dispatch(login());
+
+        return axios.post('/api/account/signin', { username, password })
+            .then((response) => {
+                dispatch(loginSuccess(username));
+            }).catch((error) => {
+                dispatch(loginFailure());
+            });
+    };
+}
