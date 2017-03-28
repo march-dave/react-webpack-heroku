@@ -1,13 +1,26 @@
-import React, { Component } from 'react';
+import * as types from 'actions/ActionTypes';
+import update from 'react-addons-update';
 
-class componentName extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
+const initialState = {
+    post: {
+        status: 'INIT',
+        error: -1
+    },
+    list: {
+        status: 'INIT',
+        data: [],
+        isLast: false
+    },
+    edit: {
+        status: 'INIT',
+        error: -1
+    },
+    remove: {
+        status: 'INIT',
+        error: -1
+    },
+    star: {
+        status: 'INIT',
+        error: -1
     }
-}
-
-export default componentName;
+};
