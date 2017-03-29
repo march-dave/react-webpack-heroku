@@ -24,3 +24,13 @@ const initialState = {
         error: -1
     }
 };
+
+export default function memo(state, action) {
+    if (typeof state === "undefined") {
+        state = initialState;
+    }
+
+
+
+
+}
