@@ -1,5 +1,19 @@
-const path = require('path')
-const express = require('express')
+const path = require('path');
+const express = require('express');
+
+const { graphql, buildSchema } = require('graphql');
+
+let schema = buildSchema(
+
+    type Query {
+        hello: String
+    }
+);
+
+var root = { hello: () => 'Hello World!' };
+graph(schema, '{Hello}', root).then((response) => {
+    console.log(response);
+});
 
 module.exports = {
     app: function() {
