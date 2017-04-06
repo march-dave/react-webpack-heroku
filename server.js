@@ -115,3 +115,17 @@ var app = express();
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 app.listen(4000, () => console.log('Now browse to localhost:4000/graphiql'));
+
+var { graphql, buildSchema } = require('graphql');
+
+var schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+
+var root = { hello: () => 'Hello world!' };
+
+graphql(schema, '{ hello }', root).then((response) => {
+    console.log(response);
+});
