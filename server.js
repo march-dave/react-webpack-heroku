@@ -129,3 +129,20 @@ var root = { hello: () => 'Hello world!' };
 graphql(schema, '{ hello }', root).then((response) => {
     console.log(response);
 });
+
+const FeedWithData = graphql(gql `{
+  feed (type: TOP, limit: 10) {
+    repository {
+      name, owner { login }
+      
+      # Uncomment the line below to get stars!
+      # stargazers_count
+    }
+
+    postedBy { login }
+  }
+}`, {
+    options: {
+        notifyOnNetworkStatusChange: true
+    }
+})(Feed);
