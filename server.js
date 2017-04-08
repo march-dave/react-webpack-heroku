@@ -146,3 +146,24 @@ const FeedWithData = graphql(gql `{
         notifyOnNetworkStatusChange: true
     }
 })(Feed);
+
+
+/*export default class App {
+  createClient() {
+    // Initialize Apollo Client with URL to our server
+    return new ApolloClient({
+      networkInterface: createNetworkInterface({
+        uri: 'http://api.githunt.com/graphql',
+      }),
+    });
+  }
+
+  render() {
+    return (
+      // Feed the client instance into your React component tree
+      <ApolloProvider client={this.createClient()}>
+        <FeedWithData />
+      </ApolloProvider>
+    );
+  }
+}*/
