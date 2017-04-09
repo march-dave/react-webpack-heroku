@@ -198,3 +198,30 @@ function FeedList({ data }) {
     </List>
   )
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 24,
+    margin: 20,
+    marginBottom: 0
+  },
+  container: {
+    flex: 1,
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+  },
+  learnMore: {
+    margin: 20,
+    marginTop: 0
+  },
+  loading: {
+    margin: 50
+  },
+  list: {
+    marginBottom: 20
+  },
+  fullApp: {
+    marginBottom: 20,
+    textAlign: 'center'
+  }
+});
