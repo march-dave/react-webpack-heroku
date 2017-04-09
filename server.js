@@ -167,3 +167,34 @@ const FeedWithData = graphql(gql `{
     );
   }
 }*/
+
+function FeedList({ data }) {
+  if (data.networkStatus === 1) {
+    return <ActivityIndicator style={styles.loading} />;
+  }
+  
+  if (data.error) {
+    return <Text>Error! {data.error.message}</Text>;
+  }
+  
+  return (
+    <List containerStyle={styles.list}>
+      { data.feed.map((item) => {
+          const badge = item.repository.stargazers_count && {
+            value: `☆ ${item.repository.stargazers_count}`,
+            badgeContainerStyle: { right: 10, backgroundColor: '#56579B' },
+            badgeTextStyle: { fontSize: 12 },
+          };
+              
+        
+          return <ListItem
+            hideChevron
+            title={`${item.repository.owner.login}/${item.repository.name}`}
+            subtitle={`Posted by ${item.postedBy.login}`}
+            badge={badge}
+          />;
+        }
+      ) }
+    </List>
+  )
+}
