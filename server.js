@@ -245,3 +245,27 @@ export default class App {
     );
   }
 }
+
+function Feed({ data }) {
+  return (
+    <ScrollView style={styles.container} refreshControl={
+      // This enables the pull-to-refresh functionality
+      <RefreshControl
+        refreshing={data.networkStatus === 4}
+        onRefresh={data.refetch}
+      />
+    }>
+      <Text style={styles.title}>GitHunt</Text>
+      <FeedList data={data} />
+      <Text style={styles.fullApp}>See the full app at www.githunt.com</Text>
+      <Button
+        buttonStyle={styles.learnMore}
+        onPress={goToApolloWebsite}
+        icon={{name: 'code'}}
+        raised
+        backgroundColor="#22A699"
+        title="Learn more about Apollo"
+      />
+    </ScrollView>
+  );
+}
