@@ -328,3 +328,6 @@ const styles = StyleSheet.create({
   }
 });
 
+function goToApolloWebsite() {
+  Linking.openURL('http://dev.apollodata.com').catch((e) => console.log(e));
+}
