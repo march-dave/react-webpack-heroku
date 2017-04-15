@@ -169,165 +169,183 @@ const FeedWithData = graphql(gql `{
 }*/
 
 function FeedList({ data }) {
-  if (data.networkStatus === 1) {
-    return <ActivityIndicator style={styles.loading} />;
-  }
-  
-  if (data.error) {
-    return <Text>Error! {data.error.message}</Text>;
-  }
-  
-  return (
-    <List containerStyle={styles.list}>
-      { data.feed.map((item) => {
-          const badge = item.repository.stargazers_count && {
-            value: `☆ ${item.repository.stargazers_count}`,
-            badgeContainerStyle: { right: 10, backgroundColor: '#56579B' },
-            badgeTextStyle: { fontSize: 12 },
-          };
-              
-        
-          return <ListItem
-            hideChevron
-            title={`${item.repository.owner.login}/${item.repository.name}`}
-            subtitle={`Posted by ${item.postedBy.login}`}
-            badge={badge}
-          />;
-        }
-      ) }
-    </List>
-  )
+    if (data.networkStatus === 1) {
+        return <ActivityIndicator style = { styles.loading }
+        />;
+    }
+
+    if (data.error) {
+        return <Text > Error!{ data.error.message } < /Text>;
+    }
+
+    return ( <
+        List containerStyle = { styles.list } > {
+            data.feed.map((item) => {
+                const badge = item.repository.stargazers_count && {
+                    value: `☆ ${item.repository.stargazers_count}`,
+                    badgeContainerStyle: { right: 10, backgroundColor: '#56579B' },
+                    badgeTextStyle: { fontSize: 12 },
+                };
+
+
+                return <ListItem
+                hideChevron
+                title = { `${item.repository.owner.login}/${item.repository.name}` }
+                subtitle = { `Posted by ${item.postedBy.login}` }
+                badge = { badge }
+                />;
+            })
+        } <
+        /List>
+    )
 }
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 24,
-    margin: 20,
-    marginBottom: 0
-  },
-  container: {
-    flex: 1,
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
-  },
-  learnMore: {
-    margin: 20,
-    marginTop: 0
-  },
-  loading: {
-    margin: 50
-  },
-  list: {
-    marginBottom: 20
-  },
-  fullApp: {
-    marginBottom: 20,
-    textAlign: 'center'
-  }
+    title: {
+        fontSize: 24,
+        margin: 20,
+        marginBottom: 0
+    },
+    container: {
+        flex: 1,
+        paddingTop: Constants.statusBarHeight,
+        backgroundColor: '#ecf0f1',
+    },
+    learnMore: {
+        margin: 20,
+        marginTop: 0
+    },
+    loading: {
+        margin: 50
+    },
+    list: {
+        marginBottom: 20
+    },
+    fullApp: {
+        marginBottom: 20,
+        textAlign: 'center'
+    }
 });
 
 export default class App {
-  createClient() {
-    // Initialize Apollo Client with URL to our server
-    return new ApolloClient({
-      networkInterface: createNetworkInterface({
-        uri: 'http://api.githunt.com/graphql',
-      }),
-    });
-  }
+    createClient() {
+        // Initialize Apollo Client with URL to our server
+        return new ApolloClient({
+            networkInterface: createNetworkInterface({
+                uri: 'http://api.githunt.com/graphql',
+            }),
+        });
+    }
 
-  render() {
-    return (
-      // Feed the client instance into your React component tree
-      <ApolloProvider client={this.createClient()}>
-        <FeedWithData />
-      </ApolloProvider>
-    );
-  }
+    render() {
+        return (
+            // Feed the client instance into your React component tree
+            <
+            ApolloProvider client = { this.createClient() } >
+            <
+            FeedWithData / >
+            <
+            /ApolloProvider>
+        );
+    }
 }
 
 function Feed({ data }) {
-  return (
-    <ScrollView style={styles.container} refreshControl={
-      // This enables the pull-to-refresh functionality
-      <RefreshControl
-        refreshing={data.networkStatus === 4}
-        onRefresh={data.refetch}
-      />
-    }>
-      <Text style={styles.title}>GitHunt</Text>
-      <FeedList data={data} />
-      <Text style={styles.fullApp}>See the full app at www.githunt.com</Text>
-      <Button
-        buttonStyle={styles.learnMore}
-        onPress={goToApolloWebsite}
-        icon={{name: 'code'}}
-        raised
-        backgroundColor="#22A699"
-        title="Learn more about Apollo"
-      />
-    </ScrollView>
-  );
+    return ( <
+        ScrollView style = { styles.container }
+        refreshControl = {
+            // This enables the pull-to-refresh functionality
+            <
+            RefreshControl
+            refreshing = { data.networkStatus === 4 }
+            onRefresh = { data.refetch }
+            />
+        } >
+        <
+        Text style = { styles.title } > GitHunt < /Text> <
+        FeedList data = { data }
+        /> <
+        Text style = { styles.fullApp } > See the full app at www.githunt.com < /Text> <
+        Button buttonStyle = { styles.learnMore }
+        onPress = { goToApolloWebsite }
+        icon = {
+            { name: 'code' }
+        }
+        raised backgroundColor = "#22A699"
+        title = "Learn more about Apollo" /
+        >
+        <
+        /ScrollView>
+    );
 }
 
 function FeedList({ data }) {
-  if (data.networkStatus === 1) {
-    return <ActivityIndicator style={styles.loading} />;
-  }
-  
-  if (data.error) {
-    return <Text>Error! {data.error.message}</Text>;
-  }
-  
-  return (
-    <List containerStyle={styles.list}>
-      { data.feed.map((item) => {
-          const badge = item.repository.stargazers_count && {
-            value: `☆ ${item.repository.stargazers_count}`,
-            badgeContainerStyle: { right: 10, backgroundColor: '#56579B' },
-            badgeTextStyle: { fontSize: 12 },
-          };
-              
-        
-          return <ListItem
-            hideChevron
-            title={`${item.repository.owner.login}/${item.repository.name}`}
-            subtitle={`Posted by ${item.postedBy.login}`}
-            badge={badge}
-          />;
-        }
-      ) }
-    </List>
-  )
+    if (data.networkStatus === 1) {
+        return <ActivityIndicator style = { styles.loading }
+        />;
+    }
+
+    if (data.error) {
+        return <Text > Error!{ data.error.message } < /Text>;
+    }
+
+    return ( <
+        List containerStyle = { styles.list } > {
+            data.feed.map((item) => {
+                const badge = item.repository.stargazers_count && {
+                    value: `☆ ${item.repository.stargazers_count}`,
+                    badgeContainerStyle: { right: 10, backgroundColor: '#56579B' },
+                    badgeTextStyle: { fontSize: 12 },
+                };
+
+
+                return <ListItem
+                hideChevron
+                title = { `${item.repository.owner.login}/${item.repository.name}` }
+                subtitle = { `Posted by ${item.postedBy.login}` }
+                badge = { badge }
+                />;
+            })
+        } <
+        /List>
+    )
 }
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 24,
-    margin: 20,
-    marginBottom: 0
-  },
-  container: {
-    flex: 1,
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
-  },
-  learnMore: {
-    margin: 20,
-    marginTop: 0
-  },
-  loading: {
-    margin: 50
-  },
-  list: {
-    marginBottom: 20
-  },
-  fullApp: {
-    marginBottom: 20,
-    textAlign: 'center'
-  }
+    title: {
+        fontSize: 24,
+        margin: 20,
+        marginBottom: 0
+    },
+    container: {
+        flex: 1,
+        paddingTop: Constants.statusBarHeight,
+        backgroundColor: '#ecf0f1',
+    },
+    learnMore: {
+        margin: 20,
+        marginTop: 0
+    },
+    loading: {
+        margin: 50
+    },
+    list: {
+        marginBottom: 20
+    },
+    fullApp: {
+        marginBottom: 20,
+        textAlign: 'center'
+    }
 });
 
 function goToApolloWebsite() {
-  Linking.openURL('http://dev.apollodata.com').catch((e) => console.log(e));
+    Linking.openURL('http://dev.apollodata.com').catch((e) => console.log(e));
 }
+
+
+// Some imports
+import React from 'react';
+import { Text, StyleSheet, Linking, ScrollView, ActivityIndicator, RefreshControl } from 'react-native';
+import { Constants } from 'expo';
+import { gql, ApolloClient, createNetworkInterface, ApolloProvider, graphql } from 'react-apollo';
+import { List, ListItem, Button } from 'react-native-elements';
