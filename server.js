@@ -47,3 +47,20 @@ var app = express();
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 app.listen(4000, () => console.log('Now browse to localhost:4000/graphiql'));
+
+
+// require 'graphql'
+
+// QueryType = GraphQL::ObjectType.define do
+//   name 'Query'
+//   field :hello do
+//     type types.String
+//     resolve -> (obj, args, ctx) { 'Hello world!' }
+//   end
+// end
+
+// Schema = GraphQL::Schema.define do
+//   query QueryType
+// end
+
+// puts Schema.execute('{ hello }')
