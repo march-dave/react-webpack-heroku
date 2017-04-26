@@ -76,3 +76,17 @@ app.listen(4000, () => console.log('Now browse to localhost:4000/graphiql'));
 // schema = graphene.Schema(query=Query)
 // result = schema.execute('{ hello }')
 // print(result.data['hello'])
+
+// var { graphql, buildSchema } = require('graphql');
+
+// var schema = buildSchema(`
+//   type Query {
+//     hello: String
+//   }
+// `);
+
+// var root = { hello: () => 'Hello world!' };
+
+// graphql(schema, '{ hello }', root).then((response) => {
+//     console.log(response);
+// });
