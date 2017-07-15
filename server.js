@@ -19,8 +19,6 @@ module.exports = {
             // app.use('/', require(./routes/index))
         app.get('/', function(_, res) { res.sendFile(indexPath) })
 
-        http.createServer(app)
-
         return app
     }
 }
