@@ -8,7 +8,7 @@
     "license": "MIT",
     "scripts": {
         "clean": "rm -rf build public/*.js public/*.map",
-        "build": "cross-env NODE_ENV=dev webpack --config ./webpack.dev.config.js --progress --colors",
+        "build": "cross-env NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
         "start": "node app.js"
     },
     "repository": {
