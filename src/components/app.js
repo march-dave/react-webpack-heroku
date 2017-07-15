@@ -6,7 +6,7 @@ export default class App extends React.Component {
       <div>
         <h1>
 
-          This is first Page!!!
+          Hello React JS
 
         </h1>
       </div>
