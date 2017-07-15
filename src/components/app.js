@@ -6,7 +6,8 @@ export default class App extends React.Component {
       <div>
           <h1>Header</h1>
           <h2>Content</h2>
-          <p>This is the content!!</p>
+          <p data-myattribue="somevalue">This is the content!!</p>
+          <h1>{1+1}</h1>
       </div>
     )
   }
