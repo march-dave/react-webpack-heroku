@@ -33,3 +33,7 @@ Before you deploy, make sure you generated your bundle through `yarn run build`.
 - folder /server is not working with project at this time but created and sub files
 - Not working the babel package build script -- "build": "cross-env NODE_ENV=production babel server --out-dir public --presets=es2015 &&  webpack --config ./webpack.prod.config.js --progress --colors",
 - webpack 3 with some WARNING in DedupePlugin
+
+
+dev: cross-env NODE_ENV=dev webpack --config ./webpack.dev.config.js --progress --colors
+prod: cross-env NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors,

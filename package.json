@@ -1,12 +1,12 @@
 {
     "name": "react-webpack-heroku",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Simplest Heroku starter kit for React apps.",
-    "main": "./src/entry.js",
     "homepage": "https://github.com/march-dave/react-webpack-heroku",
     "author": "Dave Lee",
     "license": "MIT",
     "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
         "clean": "rm -rf build public/*.js public/*.map",
         "build": "cross-env NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
         "start": "node app.js"
@@ -23,9 +23,12 @@
     ],
     "dependencies": {
         "babel-polyfill": "latest",
+        "body-parser": "^1.17.2",
         "express": "latest",
         "express-graphql": "latest",
         "graphql": "latest",
+        "http": "^0.0.0",
+        "morgan": "^1.8.2",
         "react": "latest",
         "react-dom": "latest",
         "react-redux": "latest",
