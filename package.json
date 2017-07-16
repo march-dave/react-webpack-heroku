@@ -23,7 +23,7 @@
     ],
     "dependencies": {
         "babel-polyfill": "latest",
-        "body-parser": "^1.17.2",
+        "body-Parser": "latest",
         "express": "latest",
         "express-graphql": "latest",
         "graphql": "latest",
