@@ -26,7 +26,7 @@
         "express": "latest",
         "express-graphql": "latest",
         "graphql": "latest",
-        "morgan": "^1.8.2",
+        "morgan": "latest",
         "react": "latest",
         "react-dom": "latest",
         "react-redux": "latest",
