@@ -16,7 +16,40 @@ class Content extends React.Component {
   }
 }
 
+
+
+class TableRow extends React.Component {
+  render() {
+    return (
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    )
+  }
+
+}
+
 export default class App extends React.Component {
+
+  constructor() {
+      super();
+      this.state = {
+        data: [
+          {
+              "id": 1,
+              "name": "ddave",
+              "age": "18"
+          },
+          {
+             "id": 2,
+              "name": "Bar",
+              "age": "23" 
+          }
+        ]
+      }
+  }
+
   render () {
 
     var myStyle = {
