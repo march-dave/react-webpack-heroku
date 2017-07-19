@@ -1,5 +1,21 @@
 import React from 'react'
 
+class Header extends React.Component {
+  render() {
+    return (
+      <div>Header</div>
+    );
+  }
+}
+
+class Content extends React.Component {
+  render() {
+    return (
+      <div>Content</div>
+    )
+  }
+}
+
 export default class App extends React.Component {
   render () {
 
@@ -11,6 +27,8 @@ export default class App extends React.Component {
     var i = 1;
     return (
       <div>
+          <Header />
+          <Content />
           <h1 style={myStyle}>Header</h1>
           <h2>Content</h2>
           {/* <p>This is the content!!</p>
