@@ -20,6 +20,11 @@ export default class App extends React.Component {
 
   constructor() {
       super();
+
+      this.state = {
+        header: "This is header",
+        "content": "This is content"
+      }
   }
 
   render () {
@@ -40,6 +45,9 @@ export default class App extends React.Component {
           <h1>{1+1}</h1> */}
 
           <h1>{ i == 1 ? 'True': 'False'}</h1>
+
+          {this.state.header}
+          {this.state.content}
 
           
       </div>
