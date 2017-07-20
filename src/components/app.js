@@ -16,46 +16,10 @@ class Content extends React.Component {
   }
 }
 
-
-
-class TableRow extends React.Component {
-  render() {
-    return (
-      <tr>
-        <td>{this.props.data.id}</td>
-        <td>{this.props.data.name}</td>
-        <td>{this.props.data.age}</td>
-        <td></td>
-      </tr>
-    )
-  }
-
-}
-
 export default class App extends React.Component {
 
   constructor() {
       super();
-      this.state = {
-        data: [
-          {
-              "id": 1,
-              "name": "ddave",
-              "age": "18"
-          },
-          {
-             "id": 2,
-              "name": "Bar",
-              "age": "23" 
-          },
-             {
-             "id": 3,
-              "name": "Jam",
-              "age": "17" 
-          }
-
-        ]
-      }
   }
 
   render () {
@@ -77,12 +41,7 @@ export default class App extends React.Component {
 
           <h1>{ i == 1 ? 'True': 'False'}</h1>
 
-          <table>
-            <tbody>
-              {this.state.data.map( (person, i) => <TableRow key={i} data={person} /> )}
-            </tbody>
-          </table>
-
+          
       </div>
     )
   }
