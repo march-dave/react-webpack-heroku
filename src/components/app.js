@@ -22,7 +22,9 @@ class TableRow extends React.Component {
   render() {
     return (
       <tr>
-        <td></td>
+        <td>{this.props.data.id}</td>
+        <td>{this.props.data.name}</td>
+        <td>{this.props.data.age}</td>
         <td></td>
       </tr>
     )
@@ -74,6 +76,13 @@ export default class App extends React.Component {
           <h1>{1+1}</h1> */}
 
           <h1>{ i == 1 ? 'True': 'False'}</h1>
+
+          <table>
+            <tbody>
+              {this.state.data.map( (person, i) => <TableRow key={i} data={person} /> )}
+            </tbody>
+          </table>
+
       </div>
     )
   }
