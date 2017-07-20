@@ -16,6 +16,16 @@ class Content extends React.Component {
   }
 }
 
+class UserInformation extends React.Component {
+  render() {
+    return (
+      <div>First Name <input type='text' /></div>
+    )
+  }
+}
+
+
+
 export default class App extends React.Component {
 
   constructor() {
@@ -49,7 +59,7 @@ export default class App extends React.Component {
           {this.state.header}
           {this.state.content}
 
-          
+          <UserInformation />
       </div>
     )
   }
