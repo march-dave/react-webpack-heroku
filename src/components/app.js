@@ -17,11 +17,16 @@ class Content extends React.Component {
 }
 
 class UserInformation extends React.Component {
+
+  componentDidMount() {
+    console.log('UserUpdate');
+  }
+
   render() {
     return (
       <div>
         First Name <input type='text' />
-        <button>Click</button>
+        {/* <button onClick="UserUpdate">Click</button> */}
       </div>
     )
   }
