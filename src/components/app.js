@@ -18,15 +18,16 @@ class Content extends React.Component {
 
 class UserInformation extends React.Component {
 
-  componentDidMount() {
-    console.log('UserUpdate');
+  handleButtonClick(event) {
+    console.log(event.target)
   }
+ 
 
   render() {
     return (
       <div>
         First Name <input type='text' />
-        {/* <button onClick="UserUpdate">Click</button> */}
+         <button onClick={this.handleButtonClick.bind(this)}>Click Me</button> 
       </div>
     )
   }
