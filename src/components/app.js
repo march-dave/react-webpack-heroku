@@ -20,13 +20,20 @@ class UserInformation extends React.Component {
 
   handleButtonClick(event) {
     console.log(event.target)
+
+
+
   }
- 
 
   render() {
     return (
       <div>
-        First Name <input type='text' />
+        First Name <input type='text' name="firstName" value={this.state} />
+
+        {/* <input type="text" value={this.state.values["four"]} 
+        onChange={this.handleChange.bind(this, "four")}/> */}
+                
+
          <button onClick={this.handleButtonClick.bind(this)}>Click Me</button> 
       </div>
     )
