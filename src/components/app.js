@@ -18,6 +18,18 @@ class Content extends React.Component {
 
 class UserInformation extends React.Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstname: ""
+    };
+  }
+
+  handleChange(e) {
+    
+  }
+
   handleButtonClick(event) {
     console.log(event.target)
 
@@ -28,12 +40,13 @@ class UserInformation extends React.Component {
   render() {
     return (
       <div>
-        First Name <input type='text' name="firstName" value={this.state} />
+        First Name <input type='text' placeholder="First Name" name="firstName" value={this.state.firstname} onChange={this.handleChange.bind(this)} />
 
-        <input type="text" value={this.state.values["four"]} 
-        onChange={this.handleChange.bind(this, "four")}/>
-                
+        {/* <input type="text" name="name" placeholder="name" value={this.state.name}/>
+        <input type="text" phone="phone" placeholder="phone" value={this.state.phone}/> */}
 
+        {/* <input type="text" value={this.state.values["four"]} onChange={this.handleChange.bind(this, "four")}/> */}
+            
          <button onClick={this.handleButtonClick.bind(this)}>Click Me</button> 
       </div>
     )
