@@ -21,36 +21,27 @@ class UserInformation extends React.Component {
   constructor(props) {
     super(props);
 
-    this.setState({
+    this.state = {
         firstname: ""
-      });
+      };
   }
 
-  handleChange(e) {
+  handleInput(e) {
+    this.setState({
+      firstname: e.target.value
+    })
 
-    this.setState(
-      firstname = e.target
-      );
-
-      console.log(e.target);
+    // console.log(this.state.firstname);
   }
 
   handleButtonClick(event) {
-    console.log(event.target)
-
-
-
+    console.log(this.state.firstname);
   }
 
   render() {
     return (
       <div>
-        First Name <input type='text' placeholder="First Name" name="firstName" value={this.state.firstname} onChange={this.handleChange.bind(this)} />
-
-        {/* <input type="text" name="name" placeholder="name" value={this.state.name}/>
-        <input type="text" phone="phone" placeholder="phone" value={this.state.phone}/> */}
-
-        {/* <input type="text" value={this.state.values["four"]} onChange={this.handleChange.bind(this, "four")}/> */}
+        First Name <input type='text' placeholder="First Name" name="firstName" value={this.state.firstname} onChange={this.handleInput.bind(this)} />
             
          <button onClick={this.handleButtonClick.bind(this)}>Click Me</button> 
       </div>
