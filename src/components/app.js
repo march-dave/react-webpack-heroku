@@ -22,7 +22,9 @@ class UserInformation extends React.Component {
     super(props);
 
     this.state = {
-        firstname: ""
+        firstname: "",
+        lastname: ""
+
       };
   }
 
@@ -30,8 +32,14 @@ class UserInformation extends React.Component {
     this.setState({
       firstname: e.target.value
     })
+  }
 
-    // console.log(this.state.firstname);
+  handleLastName(e) {
+    this.setState({
+      lastName: e.target.value
+    })
+
+    console.log(this.state.lastName);
   }
 
   handleButtonClick(event) {
@@ -42,7 +50,9 @@ class UserInformation extends React.Component {
     return (
       <div>
         First Name <input type='text' placeholder="First Name" name="firstName" value={this.state.firstname} onChange={this.handleInput.bind(this)} />
-            
+
+        Last Name <input type='text' placeholder="Last Name" name="lastname" value={this.state.lastname} onChange={this.handleLastName.bind(this)} />
+
          <button onClick={this.handleButtonClick.bind(this)}>Click Me</button> 
       </div>
     )
