@@ -21,13 +21,18 @@ class UserInformation extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      firstname: ""
-    };
+    this.setState({
+        firstname: ""
+      });
   }
 
   handleChange(e) {
-    
+
+    this.setState(
+      firstname = e.target
+      );
+
+      console.log(e.target);
   }
 
   handleButtonClick(event) {
