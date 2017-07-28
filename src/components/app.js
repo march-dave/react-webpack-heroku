@@ -65,12 +65,21 @@ export default class App extends React.Component {
 
       this.state = {
         header: "This is header",
-        "content": "This is content"
+        "content": "This is content",
+        age: ""
       }
   }
 
-  render () {
+  onHandleAge(e) {
+    this.setState({
+      age: e.target.value
+    }) 
 
+    console.log('age', e.target.value);
+
+  }
+
+  render () {
     var myStyle = {
       fontSize: 100,
       color: '#00FF00'
@@ -92,6 +101,9 @@ export default class App extends React.Component {
           {this.state.content}
 
           <UserInformation />
+
+          <input type='text' placeholder='age' onClick={this.onHandleAge.bind(this)} name='age' value={this.state.age}  /> 
+
       </div>
     )
   }
