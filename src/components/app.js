@@ -42,6 +42,7 @@ class UserInformation extends React.Component {
 
   handleButtonClick(event) {
     console.log(this.state.firstname);
+    console.log(this.state.lastname);
   }
 
   render() {
@@ -56,7 +57,6 @@ class UserInformation extends React.Component {
     )
   }
 }
-
 
 export default class App extends React.Component {
 
