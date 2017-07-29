@@ -75,8 +75,8 @@ export default class App extends React.Component {
       age: e.target.value
     }) 
 
-    console.log('age', e.target.value);
-
+    // console.log('age', e.target.value);
+    console.log('age: ', this.state.age);
   }
 
   render () {
