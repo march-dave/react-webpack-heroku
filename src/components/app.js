@@ -100,9 +100,9 @@ export default class App extends React.Component {
           {this.state.header}
           {this.state.content}
 
-          <UserInformation />
+          <UserInformation /> 
 
-          <input type='text' placeholder='age' onClick={this.onHandleAge.bind(this)} name='age' value={this.state.age}  /> 
+          <input type='text' placeholder='age' onChange={this.onHandleAge.bind(this)} name='age' value={this.state.age}  /> 
 
       </div>
     )
