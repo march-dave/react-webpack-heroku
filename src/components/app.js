@@ -60,8 +60,8 @@ class UserInformation extends React.Component {
 
 export default class App extends React.Component {
 
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
 
       this.state = {
         header: "This is header",
