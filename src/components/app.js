@@ -31,13 +31,14 @@ class UserInformation extends React.Component {
     this.setState({
       firstname: e.target.value
     })
+    console.log('firstname', this.state.firstname);
   }
 
   handleLastName(e) {
     this.setState({
       lastname: e.target.value
     })
-    // console.log(this.state.lastName);
+    console.log('lastname', this.state.lastName);
   }
 
   handleButtonClick(event) {
