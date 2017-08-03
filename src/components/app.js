@@ -80,6 +80,7 @@ export default class App extends React.Component {
     console.log('age: ', this.state.age);
     console.log('age: ', this.state.firstname);
     console.log('age: ', this.state.lastname);
+
   }
 
   render () {
@@ -100,8 +101,8 @@ export default class App extends React.Component {
 
           <h1>{ i == 1 ? 'True': 'False'}</h1>
 
-          {this.state.header}
-          {this.state.content}
+          {/* {this.state.header}
+          {this.state.content} */}
 
           <UserInformation /> 
 
