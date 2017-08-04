@@ -22,6 +22,7 @@ class UserInformation extends React.Component {
     super(props);
 
     this.state = {
+        userinfo: "User Info Header",
         firstname: "",
         lastname: ""
       };
@@ -32,6 +33,7 @@ class UserInformation extends React.Component {
       firstname: e.target.value
     })
     console.log('firstname', this.state.firstname);
+    console.log('User Info Header', this.state.userinfo);
   }
 
   handleLastName(e) {
@@ -104,7 +106,7 @@ export default class App extends React.Component {
           {/* {this.state.header}
           {this.state.content} */}
 
-          <UserInformation /> 
+          <UserInformation />
 
           <input type='text' placeholder='age' onChange={this.onHandleAge.bind(this)} name='age' value={this.state.age}  /> 
 
