@@ -110,6 +110,8 @@ export default class App extends React.Component {
 
           <input type='text' placeholder='age' onChange={this.onHandleAge.bind(this)} name='age' value={this.state.age}  /> 
 
+          <h1>{this.props.age}</h1>
+
       </div>
     )
   }
