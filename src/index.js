@@ -12,7 +12,7 @@ import thunk from 'redux-thunk';
 // const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
-    <App />, document.getElementById('main')
+    <App askageProp='11' />, document.getElementById('main')
 );
 
 /*const rootElement = document.getElementById('main');
