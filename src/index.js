@@ -4,7 +4,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import App from './components/app'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-// import reducers from 'reducers';
+import reducers from 'reducers';
 import thunk from 'redux-thunk';
 
 // import './styles/app.scss'
@@ -29,3 +29,5 @@ ReactDOM.render(
         </Router>
     </Provider>, rootElement
 );*/
+
+
