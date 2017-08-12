@@ -1,4 +1,5 @@
 export const ADD_TODO = 'ADD_TODO'
+export const ADD_NEXt = 'ADD_NEXT'
 
 let nextTodo = 0;
 
