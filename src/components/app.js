@@ -46,6 +46,10 @@ class UserInformation extends React.Component {
   handleButtonClick(event) {
     console.log(this.state.firstname);
     console.log(this.state.lastname);
+
+    var arr = [1, 2, 3, 5, 4];
+    arr.sort();
+
   }
 
   render() {
