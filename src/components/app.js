@@ -27,7 +27,7 @@ class UserInformation extends React.Component {
         lastname: ""
       };
   }
-
+  
   handleInput(e) {
     this.setState({
       firstname: e.target.value
@@ -47,8 +47,8 @@ class UserInformation extends React.Component {
     console.log(this.state.firstname);
     console.log(this.state.lastname);
 
-    var arr = [1, 2, 3, 5, 4];
-    arr.sort();
+    // var arr = [1, 2, 3, 5, 4];
+    // arr.sort();
 
   }
 
