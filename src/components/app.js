@@ -96,7 +96,7 @@ export default class App extends React.Component {
       color: '#00FF00'
     }
 
-    var i = 1;
+    // var i = 1;
     return (
       <div>
           <Header />
@@ -121,3 +121,9 @@ export default class App extends React.Component {
     )
   }
 }
+
+// function select(state) {
+//   return {
+//     visibleTods: state.todos
+//   }
+// }
