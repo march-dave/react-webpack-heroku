@@ -121,9 +121,3 @@ export default class App extends React.Component {
     )
   }
 }
-
-// function select(state) {
-//   return {
-//     visibleTods: state.todos
-//   }
-// }
