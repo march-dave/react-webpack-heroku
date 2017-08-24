@@ -108,8 +108,8 @@ export default class App extends React.Component {
 
           <h1>{ i == 1 ? 'True': 'False'}</h1>
 
-          {/* {this.state.header}
-          {this.state.content} */}
+          {this.state.header}
+          {this.state.content}
 
           <UserInformation />
 
