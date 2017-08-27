@@ -106,10 +106,10 @@ export default class App extends React.Component {
           <p>This is the content!!</p>
           <h1>{1+1}</h1>
 
-          <h1>{ i == 1 ? 'True': 'False'}</h1>
+          {/* <h1>{ i == 1 ? 'True': 'False'}</h1> */}
 
-          {this.state.header}
-          {this.state.content}
+          {/* {this.state.header}
+          {this.state.content} */}
 
           <UserInformation />
 
