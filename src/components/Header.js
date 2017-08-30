@@ -12,4 +12,4 @@ class Header extends Component {
     }
 }
 
-export default componentName;
+export default Header;

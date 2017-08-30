@@ -11,6 +11,7 @@ import App from './components/app'
 
 // const store = createStore(reducers, applyMiddleware(thunk));
 
+
 ReactDOM.render(
     <App askageProp='11' />, document.getElementById('main')
 );
