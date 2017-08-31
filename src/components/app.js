@@ -103,7 +103,6 @@ export default class App extends React.Component {
         <Route exact path="/" component={Header} />
         <Route path="/Home" component={Home} />
         <Route path="/Login" component={Login} />
-        {/* <Route component={NoMatch} /> */}
       </Switch>
           {/* 
           <h1 style={myStyle}>Header</h1>
