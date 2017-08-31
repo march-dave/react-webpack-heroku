@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header'
 import Home from '../containers/Home'
-import Login from '../containers/Home'
+import Login from '../containers/Login'
 
 class Content extends React.Component {
   render() {
