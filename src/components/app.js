@@ -3,6 +3,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header'
 import Home from '../containers/Home'
+import Login from '../containers/Home'
 
 class Content extends React.Component {
   render() {
@@ -101,7 +102,8 @@ export default class App extends React.Component {
       <Switch>
         <Route exact path="/" component={Header} />
         <Route path="/Home" component={Home} />
-        <Route component={NoMatch} />
+        <Route path="/Login" component={Login} />
+        {/* <Route component={NoMatch} /> */}
       </Switch>
           {/* 
           <h1 style={myStyle}>Header</h1>
