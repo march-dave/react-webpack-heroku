@@ -104,12 +104,14 @@ export default class App extends React.Component {
         <Route path="/Home" component={Home} />
         <Route path="/Login" component={Login} />
       </Switch>
-          {/* 
+          {
+          <UserInformation />
+          
+          /*
           <h1 style={myStyle}>Header</h1>
           <h2>Content</h2>
           <p>This is the content!!</p>
 
-          <UserInformation />
 
 
           <input type='text' placeholder='age' onChange={this.onHandleAge.bind(this)} name='age' value={this.state.age}  /> 
