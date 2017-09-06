@@ -69,7 +69,7 @@ class Content extends React.Component {
 
   render() {
     return (
-      <div>Content Page {this.state.name} </div>
+      <div>Content Page {this.props.content} </div>
     )
   }
 }
@@ -103,7 +103,7 @@ export default class App extends React.Component {
       <Router>
       <div>
      
-      <Content cmlvcx={this.props.name} />
+      <Content cmlvcx={this.state.content} />
       <Switch>
         <Route exact path="/" component={Header} />
         <Route path="/Home" component={Home} />
