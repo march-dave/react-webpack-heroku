@@ -6,9 +6,18 @@ import Home from '../containers/Home'
 import Login from '../containers/Login'
 
 class Content extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "Dave"
+    }
+  }
+
   render() {
     return (
-      <div>Content Page</div>
+      <div>Content Page name={this.state.name} </div>
     )
   }
 }
@@ -98,7 +107,7 @@ export default class App extends React.Component {
       <Router>
       <div>
      
-      <Content />
+      <Content name={this.props.name} />
       <Switch>
         <Route exact path="/" component={Header} />
         <Route path="/Home" component={Home} />
