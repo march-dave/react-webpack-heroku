@@ -6,7 +6,7 @@ class Header extends Component {
         return (
             <div>
                 <Link to="/">Home</Link>
-                <Link to="/">Login</Link>
+                {/* <Link to="/">Login</Link> */}
             </div>
         );
     }
