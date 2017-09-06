@@ -5,22 +5,7 @@ import Header from './Header'
 import Home from '../containers/Home'
 import Login from '../containers/Login'
 
-class Content extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: "Dave"
-    }
-  }
-
-  render() {
-    return (
-      <div>Content Page naturalname={this.state.name} </div>
-    )
-  }
-}
 
 class UserInformation extends React.Component {
 
@@ -72,6 +57,23 @@ class UserInformation extends React.Component {
   }
 }
 
+class Content extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "Dave"
+    }
+  }
+
+  render() {
+    return (
+      <div>Content Page {this.state.name} </div>
+    )
+  }
+}
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -88,12 +90,6 @@ export default class App extends React.Component {
     this.setState({
       age: e.target.value
     }) 
-
-    console.log('age', e.target.value);
-    console.log('age: ', this.state.age);
-    console.log('age: ', this.state.firstname);
-    console.log('age: ', this.state.lastname);
-
   }
 
   render () {
@@ -107,7 +103,7 @@ export default class App extends React.Component {
       <Router>
       <div>
      
-      <Content naturalname={this.props.name} />
+      <Content cmlvcx={this.props.name} />
       <Switch>
         <Route exact path="/" component={Header} />
         <Route path="/Home" component={Home} />
