@@ -74,6 +74,19 @@ class Content extends React.Component {
   }
 }
 
+class InputRange extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div> </div>
+    )
+  }
+
+}
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -104,6 +117,7 @@ export default class App extends React.Component {
       <div>
 
       <Content aaaaaaa="I am props" />
+      <InputRange />
       <Switch>
         <Route exact path="/" component={Header} />
         <Route path="/Home" component={Home} />
