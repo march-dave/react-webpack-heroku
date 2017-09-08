@@ -84,7 +84,18 @@ class InputRange extends React.Component {
       <div> </div>
     )
   }
+}
 
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div></div>
+    )
+  }
 }
 
 export default class App extends React.Component {
