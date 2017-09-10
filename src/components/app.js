@@ -5,8 +5,6 @@ import Header from './Header'
 import Home from '../containers/Home'
 import Login from '../containers/Login'
 
-
-
 class UserInformation extends React.Component {
 
   constructor(props) {
@@ -93,7 +91,7 @@ class Button extends React.Component {
 
   render() {
     return (
-      <div></div>
+      <div>Test</div>
     )
   }
 }
@@ -134,17 +132,6 @@ export default class App extends React.Component {
         <Route path="/Home" component={Home} />
         <Route path="/Login" component={Login} />
       </Switch>
-          {/* 
-          <h1 style={myStyle}>Header</h1>
-          <h2>Content</h2>
-          <p>This is the content!!</p>
-
-          <UserInformation />
-
-
-          <input type='text' placeholder='age' onChange={this.onHandleAge.bind(this)} name='age' value={this.state.age}  /> 
-
-          <h1>Props: {this.props.askageProp}</h1> */}
 
       </div>
       </Router>
