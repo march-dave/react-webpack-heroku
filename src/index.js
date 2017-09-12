@@ -13,7 +13,7 @@ import App from './components/app'
 
 
 ReactDOM.render(
-    <App askageProp='11' />, document.getElementById('main')
+    <App askageProp='111111' />, document.getElementById('main')
 );
 
 /*const rootElement = document.getElementById('main');
