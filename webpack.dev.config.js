@@ -17,11 +17,12 @@ module.exports = {
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin()
     ],
 
     module: {
-        loaders: [{
+        // loaders: [{
+        rules: [{
                 test: /\.js?$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',

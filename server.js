@@ -1,6 +1,54 @@
 var express = require('express');
 var graphqlHttp = require('express-graphql');
 var { buildSchema } = require('graphql');
+const path = require('path')
+const express = require('express')
+const morgan = require('morgan')
+const http = require('http')
+    // const bodyParser = require('body-Parser')
+
+module.exports = {
+    app: function() {
+        const app = express()
+
+        app.use(morgan('dev'))
+            // app.use(bodyParser.json())
+            // app.use(bodyParser.urlencoded({ extended: false }))
+
+        const indexPath = path.join(__dirname, 'index.html')
+        const publicPath = express.static(path.join(__dirname, 'public'))
+
+        app.use('/public', publicPath)
+            // app.use('/', require(./routes/index))
+        app.get('/', function(_, res) { res.sendFile(indexPath) })
+
+        return app
+    }
+}
+
+// var express = require('express');
+// var graphqlHttp = require('express-graphql');
+// var { buildSchema } = require('graphql');
+
+// var schema = buildSchema(`
+//   type Query {
+//     hello: String
+//   }
+// `);
+
+// var root = { hello: () => 'hello world!' };
+
+// var app = express();
+// app.use('graphql', graphqlHttp({
+//     schema: schema,
+//     rootValue: root,
+//     graphiql: true,
+// }));
+
+// app.listen(4000, () => console.log('Now browse to localhost:4000/graphql'));
+>>>
+>>>
+> 5 c7fb4589db1aa5c8770f1bc6b5f5073d26579d3
 
 var schema = buildSchema(`
   type Query {

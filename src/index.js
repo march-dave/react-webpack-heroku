@@ -1,18 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+// import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import App from './components/app'
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+// import { Provider } from 'react-redux';
+// import { createStore, applyMiddleware } from 'redux';
 // import reducers from 'reducers';
-import thunk from 'redux-thunk';
+// import thunk from 'redux-thunk';
 
 // import './styles/app.scss'
 
 // const store = createStore(reducers, applyMiddleware(thunk));
 
+
 ReactDOM.render(
-    <App />, document.getElementById('main')
+    <App askageProp='111111' />, document.getElementById('main')
 );
 
 /*const rootElement = document.getElementById('main');
@@ -29,3 +30,5 @@ ReactDOM.render(
         </Router>
     </Provider>, rootElement
 );*/
+
+
