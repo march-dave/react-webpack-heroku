@@ -12,8 +12,7 @@ import App from './components/app'
 // const store = createStore(reducers, applyMiddleware(thunk));
 
 
-ReactDOM.render( <
-    App askageProp = '111111' / > , document.getElementById('main')
+ReactDOM.render( <App askageProp = '111111' /> , document.getElementById('main')
 );
 
 // const rootElement = document.getElementById('main');
