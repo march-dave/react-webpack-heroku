@@ -16,7 +16,7 @@ ReactDOM.render( <
     App askageProp = '111111' / > , document.getElementById('main')
 );
 
-// /*const rootElement = document.getElementById('main');
+// const rootElement = document.getElementById('main');
 // ReactDOM.render(
 //     <Provider store={store}>
 //         <Router history={browserHistory}>
@@ -29,4 +29,4 @@ ReactDOM.render( <
 //             </Route>
 //         </Router>
 //     </Provider>, rootElement
-// );*/
+// );
