@@ -22,8 +22,8 @@ class UserInformation extends React.Component {
         this.setState({
                 firstname: e.target.value
             })
-            // console.log('firstname', this.state.firstname);
-            // console.log('User Info Header', this.state.userinfo);
+            console.log('firstname', this.state.firstname);
+            console.log('User Info Header', this.state.userinfo);
     }
 
     handleLastName(e) {
