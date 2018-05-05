@@ -1,11 +1,11 @@
-// var express = require('express');
-// var graphqlHttp = require('express-graphql');
-// var { buildSchema } = require('graphql');
-// const path = require('path')
-// const express = require('express')
-// const morgan = require('morgan')
-// const http = require('http')
-//     // const bodyParser = require('body-Parser')
+var express = require('express');
+var graphqlHttp = require('express-graphql');
+var { buildSchema } = require('graphql');
+const path = require('path')
+    // const express = require('express')
+    // const morgan = require('morgan')
+    // const http = require('http')
+    //     // const bodyParser = require('body-Parser')
 
 // module.exports = {
 //     app: function() {
