@@ -1,4 +1,4 @@
-# React / Webpack / Heroku Starter Kit 
+# React / Webpack / Heroku Starter Kit .
 
 Heroku deployable app for React/Webpack web apps.
 
